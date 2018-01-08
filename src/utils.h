@@ -102,7 +102,7 @@ extern int use_syslog;
 #define USE_SYSLOG(_ident, _cond)                               \
     do {                                                        \
         if (!use_syslog && (_cond)) {                           \
-            use_syslog = 1;                                     \
+            use_syslog = 0;                                     \
         }                                                       \
         if (use_syslog) {                                       \
             openlog((_ident), LOG_CONS | LOG_PID, LOG_DAEMON);  \
